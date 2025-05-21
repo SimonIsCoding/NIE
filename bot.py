@@ -4,13 +4,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # --- Configuration du driver ---
 options = Options()
 # options.add_argument("--headless")  # Optionnel, pour exécuter sans fenêtre
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36")
-service = Service(executable_path="/usr/local/bin/chromedriver")
+service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # --- Charger le site cible ---

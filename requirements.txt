@@ -1,0 +1,9 @@
+# Dépendances Python
+selenium==4.18.1
+webdriver-manager==4.0.1
+
+# Instructions d'installation :
+# 1. Installer Python depuis https://www.python.org/downloads/
+# 2. Installer les dépendances : pip install -r requirements.txt
+# 3. Installer Google Chrome depuis https://www.google.com/chrome/
+# 4. ChromeDriver sera automatiquement géré par webdriver-manager 
